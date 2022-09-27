@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+#container {
+  margin: 20px 0;
+}
+
+#container>div {
+  width: 700px;
+  padding: 20px;
+  background-color: #F7FDFF;
+}
+
+#xml_data, #json_data {
+  width: calc(100% - 10px);
+  resize: none;
+  display: block;
+}
+
+#xml_file, #json_file {
+  width: calc(100% - 10px);
+  display: block;
+}

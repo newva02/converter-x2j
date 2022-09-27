@@ -1,0 +1,24 @@
+{
+  "name": "converter-x2j",
+  "version": "1.0.0",
+  "description": "```\r xml을 json으로 변환하는 프로그램 입니다.\r ```",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newva02/converter-x2j.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newva02/converter-x2j/issues"
+  },
+  "homepage": "https://github.com/newva02/converter-x2j#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "xml2js": "^0.4.23"
+  }
+}
