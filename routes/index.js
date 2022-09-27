@@ -10,30 +10,25 @@ router.get('/', function(req, res) {
 // post method
 router.post('/', function(req, res) {
   var _xml_data = req.body.xml_data;
-  console.log(_xml_data);
 
-  res.send({ xml_data: _xml_data });
+  // test sending
+  // console.log(_xml_data);
+  // res.send({ xml_data: _xml_data });
 
   // parse xml to json
+  var parser = new xml2js.Parser();
+  parser.parseStringPromise(_xml_data).then(function(result) {
+    console.log(JSON.stringify(result, null, 2));
 
-  // xml2js.parseString(data, (err, result) => {
-  //   if(err) {
-  //     throw err;
-  //   }
+    res.send({
+      json_data: result
+    });
 
-  //   var json_data = JSON.stringify(result, null, 4);
-
-  //   console.log(json_data);
-
-  //   var json_data_ch = {};
-  //   json_data_ch.encrypted = 'false';
-  //   json_data_ch.entry = [];
-  //   json_data_ch.name = 'metadata01';
-  //   console.log(json_data_ch);
-  //   console.log(result.WSRRDataCapture.Object);
-  //   var json_data_obj = result.WSRRDataCapture.Object;
-  //   console.log(JSON.stringify(json_data_obj, null, 4));
-  // });
+    console.log('Succeed');
+  })
+  .catch(function (err) {
+    console.log('Failed');
+  });
 
 });
 

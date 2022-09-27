@@ -20,5 +20,10 @@ convert_data_btn.addEventListener('click', function(e) {
     }),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      // var _data = JSON.parse(data);
+      var _data = JSON.stringify(data, null, 2);
+      console.log(_data);
+      // console.log(data);
+  });
 });
